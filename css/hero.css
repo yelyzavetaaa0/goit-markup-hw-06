@@ -3,7 +3,7 @@
   /* Темное наложение (оверлей) + фоновое изображение для мобильных */
   background-image:
     linear-gradient(rgba(46, 47, 66, 0.7), rgba(46, 47, 66, 0.7)),
-    url("../images/hero-bg-mobile.jpg"); /* Укажите ваш правильный путь к картинке */
+    url("../images/hero/hero-bg-m1.jpg"); /* Укажите ваш правильный путь к картинке */
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
@@ -57,7 +57,7 @@
     /* Меняем фоновую картинку на более качественную для планшетов */
     background-image:
       linear-gradient(rgba(46, 47, 66, 0.7), rgba(46, 47, 66, 0.7)),
-      url("../images/hero-bg-tablet.jpg");
+      url("../images/hero/hero-bg-t1.png");
 
     /* Увеличиваем внутренние отступы секции */
     padding: 112px 0;
@@ -74,16 +74,13 @@
   }
 }
 
-
 @media screen and (min-width: 1158px) {
   .hero {
     /* Фоновое изображение максимального разрешения для компьютеров */
-    background-image: linear-gradient(
-        rgba(46, 47, 66, 0.7),
-        rgba(46, 47, 66, 0.7)
-      ),
-      url("../images/hero-bg-desktop.jpg");
-    
+    background-image:
+      linear-gradient(rgba(46, 47, 66, 0.7), rgba(46, 47, 66, 0.7)),
+      url("../images/hero/hero-bg-d1.jpg");
+
     /* Максимальные отступы сверху и снизу */
     padding: 188px 0;
   }
@@ -92,3 +89,4 @@
     /* Увеличиваем отступ до кнопки для десктопа */
     margin-bottom: 48px;
   }
+}
