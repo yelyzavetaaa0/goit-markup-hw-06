@@ -1,6 +1,6 @@
 .features {
   background-color: #ffffff;
-  padding: 96px 0;
+  padding: 96px 0; /* Стандартный вертикальный отступ секции на мобильном */
 }
 
 .features-list {
@@ -8,31 +8,32 @@
   padding: 0;
   margin: 0;
   display: flex;
-  flex-direction: column;
-  gap: 72px;
+  flex-direction: column; /* Карточки идут одна под другой */
+  gap: 72px; /* Вертикальное расстояние 72px между карточками по макету */
 }
 
 .features-item {
-  width: 100%;
+  width: 100%; /* Каждая карточка занимает всю ширину экрана */
 }
 
+/* Полностью скрываем плашки с иконками на мобильном и планшете */
 .features-wrapper {
   display: none;
 }
 
 .features-subtitle {
   font-weight: 700;
-  font-size: 36px;
+  font-size: 36px; /* Крупный жирный шрифт для мобильной версии */
   line-height: 1.2;
   letter-spacing: 0.02em;
   color: #2e2f42;
-  text-align: center;
+  text-align: center; /* СТРОГО ПО ЦЕНТРУ (как на фото 1) */
   margin-top: 0;
   margin-bottom: 8px;
 }
 
 .features-desc {
-  font-weight: 500;
+  font-weight: 500; /* Более плотный текст для читабельности на мобильном */
   font-size: 16px;
   line-height: 1.5;
   letter-spacing: 0.02em;
@@ -42,75 +43,54 @@
 
 @media screen and (min-width: 768px) {
   .features-list {
-    flex-direction: row;
-    flex-wrap: wrap;
-    gap: 72px 24px;
+    flex-direction: row; /* Разрешаем элементам вставать в ряд */
+    flex-wrap: wrap; /* Разрешаем перенос на следующую строку */
+    gap: 72px 24px; /* 72px между строками, 24px между колонками по сетке */
   }
 
   .features-item {
+    /* Точный расчет для 2-х колонок: из 100% вычитаем один горизонтальный gap (24px) и делим на 2 */
     width: calc((100% - 24px) / 2);
   }
 
   .features-subtitle {
-    text-align: left;
+    text-align: left; /* ВЫРАВНИВАНИЕ ПО ЛЕВОМУ КРАЮ (как на фото 2) */
     font-weight: 700;
-    font-size: 36px;
+    font-size: 36px; /* Размер остается прежним, но текст теперь перестраивается влево */
   }
 }
 
 @media screen and (min-width: 1158px) {
-  .container {
-    max-width: 1158px;
-    padding-left: 15px;
-    padding-right: 15px;
-    margin: 0 auto;
-  }
-
   .features {
-    padding: 120px 0;
+    padding: 120px 0; /* Увеличиваем отступы секции на десктопе */
   }
 
   .features-list {
-    display: flex;
-    flex-wrap: nowrap;
-    gap: 24px;
+    gap: 24px; /* На десктопе карточки в один ряд, поэтому нужен только боковой gap */
   }
 
   .features-item {
+    /* Точный расчет для 4-х колонок в один ряд */
     width: calc((100% - 72px) / 4);
   }
 
+  /* Включаем отображение серых плашек с иконками на десктопе */
   .features-wrapper {
     display: flex;
     align-items: center;
     justify-content: center;
-
-    border: 1px solid #8e8f99;
-    border-radius: 4px;
-    width: 264px;
     height: 112px;
-
-    background: #f4f4fd;
-
+    background-color: #f4f4fd;
+    border-radius: 4px;
     margin-bottom: 8px;
   }
 
   .features-subtitle {
-    margin-bottom: 8px;
-    font-weight: 500;
-    font-size: 20px;
-    line-height: 1.2;
-
-    letter-spacing: 0.02em;
-    color: #2e2f42;
+    font-weight: 500; /* Заголовки на десктопе становятся тоньше */
+    font-size: 20px; /* И значительно меньше */
   }
+
   .features-desc {
-    font-weight: 400;
-
-    font-size: 16px;
-    line-height: 1.5;
-    letter-spacing: 0.02em;
-
-    color: #434455;
+    font-weight: 400; /* Стандартная толщина текста */
   }
 }
