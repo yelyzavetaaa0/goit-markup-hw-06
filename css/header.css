@@ -114,7 +114,7 @@
 
 @media screen and (min-width: 1158px) {
   .logo {
-    margin-right: 76px;
+    margin-right: 0;
   }
 
   /* Выстраиваем контакты в одну строку, как на Фото 3 */
