@@ -25,7 +25,6 @@ ol,
 ul {
   margin: 0;
   padding: 0;
-
   list-style-type: none;
 }
 
@@ -36,6 +35,8 @@ a {
 
 button {
   cursor: pointer;
+  border: none;
+  background: none;
 }
 
 address {
@@ -44,6 +45,8 @@ address {
 
 img {
   display: block;
+  max-width: 100%;
+  height: auto;
 }
 
 .sr-only {
@@ -59,6 +62,8 @@ img {
   margin: -1px;
 }
 
+/* Мобільга версія */
+
 .container {
   min-width: 320px;
   max-width: 375px;
@@ -66,24 +71,76 @@ img {
   margin: 0 auto;
 }
 
+/* Шапка (Мобільна) */
+.page-header {
+  border-bottom: 1px solid #e7e9fc;
+}
+
+.header-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 56px;
+}
+
+.logo {
+  font-family: "Raleway", sans-serif;
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 1.17;
+  letter-spacing: 0.03em;
+  text-transform: uppercase;
+  color: #2e2f42;
+}
+
+.logo .accent {
+  color: #4d5ae5;
+}
+
+.mobile-menu-open-btn {
+  padding: 0;
+  line-height: 0;
+}
+
+/* Ховаємо навігацію та контакти на мобільних пристроях (як на Фото 1) */
+.header-nav-wrapper {
+  display: none;
+}
+
+
+/* Планшетна версія */
+
 @media screen and (min-width: 768px) {
   .container {
-    min-width: 768px;
-    padding: 0 16px;
+    max-width: 768px;
   }
-}
 
-.section {
-  padding: 96px 0;
-}
+  /* Перемикаємо шапку на відображення в один рядок */
+  .header-container {
+    height: 72px;
+  }
 
-@media screen and (min-width: 768px) {
-  max-width: 768px;
-}
 
-@media screen and (min-width: 1158px) {
-  max-width: 1158px;
-  padding: 0 15px;
+  /* Декстопна версія */
 
-  padding: 120px 0;
+  @media screen and (min-width: 1158px) {
+  .container {
+    max-width: 1158px;
+    padding: 0 15px;
+  }
+
+  .header-nav-wrapper {
+    margin-left: 76px;
+  }
+
+  .contacts-list {
+    flex-direction: row;
+    gap: 40px;
+  }
+
+  .contacts-link {
+    font-size: 16px;
+    line-height: 1.5;
+    letter-spacing: 0.02em;
+  }
 }
