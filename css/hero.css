@@ -38,7 +38,7 @@
   letter-spacing: 0.02em;
   color: #ffffff;
   /* Ограничиваем ширину текста, чтобы он переносился как на макете */
-  max-width: 320px;
+  max-width: 216px;
   margin-bottom: 72px;
 }
 
