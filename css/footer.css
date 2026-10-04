@@ -180,7 +180,7 @@
   }
 
   .footer-info {
-    align-items: flex-start; /* Выравнивание текста и лого влево */
+    align-items: flex-start;
   }
 
   .footer-socials {
@@ -223,7 +223,7 @@
   }
 
   .footer-socials {
-    margin-right: 80px;
+    margin-right: 83px;
   }
 
   .footer-bottom {
