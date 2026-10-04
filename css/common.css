@@ -62,11 +62,10 @@ img {
   margin: -1px;
 }
 
-/* Мобільга версія */
+/* Мобільна версія */
 
 .container {
-  min-width: 320px;
-  max-width: 375px;
+  width: 320px;
   padding: 0 16px;
   margin: 0 auto;
 }
@@ -111,7 +110,7 @@ img {
 
 @media screen and (min-width: 768px) {
   .container {
-    max-width: 768px;
+    width: 768px;
   }
 
   /* Перемикаємо шапку на відображення в один рядок */
@@ -124,7 +123,7 @@ img {
 
 @media screen and (min-width: 1158px) {
   .container {
-    max-width: 1158px;
+    width: 1158px;
     padding: 0 15px;
   }
 
