@@ -1,4 +1,7 @@
 .hero {
+  max-width: 1440px;
+  margin: 0 auto;
+
   background-color: #2e2f42;
   /* Звичайне фото для мобільних (1x) */
   background-image:
@@ -66,6 +69,7 @@
     background-image:
       linear-gradient(rgba(46, 47, 66, 0.7), rgba(46, 47, 66, 0.7)),
       url("../images/hero/hero-bg-t1.png");
+
     padding: 112px 0;
   }
 
@@ -96,6 +100,7 @@
     background-image:
       linear-gradient(rgba(46, 47, 66, 0.7), rgba(46, 47, 66, 0.7)),
       url("../images/hero/hero-bg-d1.jpg");
+
     padding: 188px 0;
   }
 
@@ -107,5 +112,9 @@
         linear-gradient(rgba(46, 47, 66, 0.7), rgba(46, 47, 66, 0.7)),
         url("../images/hero/hero-bg-d2.jpg");
     }
+  }
+
+  .hero-title {
+    margin-bottom: 48px;
   }
 }
