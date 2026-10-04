@@ -1,34 +1,53 @@
 .footer {
-  padding: 100px 0;
-  background: #2e2f42;
+  background-color: #2e2f42;
+  padding: 96px 0;
 }
 
 .container-footer {
   display: flex;
-  align-items: flex-start;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 72px;
 }
 
 .footer-info {
   display: flex;
   flex-direction: column;
-
-  margin-right: 120px;
+  align-items: center;
 }
 
 .footer-logo {
-  display: inline-block;
+  font-family: "Raleway", sans-serif;
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 1.17;
+  letter-spacing: 0.03em;
+  text-transform: uppercase;
+  color: #4d5ae5;
+  text-decoration: none;
   margin-bottom: 16px;
+  display: inline-block;
+}
+
+.footer-logo .accent {
+  color: #f4f4fd;
 }
 
 .footer-desc {
-  font-weight: 400;
-  max-width: 264px;
-  color: #f4f4fd;
+  font-size: 16px;
   line-height: 1.5;
+  letter-spacing: 0.02em;
+  color: #f4f4fd;
+  max-width: 268px;
+  text-align: center;
   margin: 0;
 }
 
 .footer-socials {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
 .footer-socials-title {
@@ -37,20 +56,25 @@
   line-height: 1.5;
   letter-spacing: 0.02em;
   color: #ffffff;
+  margin-top: 0;
   margin-bottom: 16px;
 }
 
 .footer-socials-list {
-  display: flex;
-  gap: 16px;
   list-style: none;
   padding: 0;
   margin: 0;
+  display: flex;
+  gap: 16px;
 }
 
 .footer-socials-item {
   width: 40px;
   height: 40px;
+}
+
+.mobile-social-icon {
+  fill: #ffffff;
 }
 
 .footer-socials-link {
@@ -71,44 +95,62 @@
 }
 
 .footer-socials-icon {
-  width: 24px;
-  height: 24px;
-  fill: currentColor;
+  fill: #f4f4fd;
 }
 
-/* Footer form */
-
 .footer-bottom {
-  margin-left: auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
 }
 
 .footer-form {
   display: flex;
-  gap: 24px;
+  flex-direction: column;
+  align-items: center;
+  gap: 16px;
+  width: 100%;
 }
 
 .footer-form-input {
-  width: 264px;
+  width: 100%;
+  max-width: 398px;
   height: 40px;
-  padding: 8px 16px;
-
+  border: 1px solid #ffffff;
+  background-color: transparent;
+  border-radius: 4px;
+  padding-left: 16px;
   font-size: 12px;
-  line-height: 1.17;
+  line-height: 2;
   letter-spacing: 0.04em;
   color: #ffffff;
-
-  background-color: transparent;
-  border: 1px solid #ffffff;
-  border-radius: 4px;
-  box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.15);
-  outline: none;
-
-  transition: border-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+  outline: transparent;
 }
 
 .footer-form-input::placeholder {
   color: #ffffff;
 }
+
+.footer-form-btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 165px;
+  height: 40px;
+  border: none;
+  border-radius: 4px;
+  background-color: #4d5ae5;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 1.5;
+  letter-spacing: 0.04em;
+  color: #ffffff;
+  cursor: pointer;
+  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
 .footer-form-input:focus {
   border-color: #31d0aa;
 }
@@ -117,19 +159,83 @@
   background-color: #31d0aa;
 }
 
-.footer-form-btn {
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  flex-direction: row;
-
-  gap: 16px;
-
-  min-width: 165px;
-  height: 40px;
-  padding: 8px 24px;
+.footer-form-icon {
+  margin-left: 16px;
+  fill: #ffffff;
 }
 
-.footer-form-icon {
-  fill: #ffffff;
+@media screen and (min-width: 768px) {
+  .footer {
+    padding: 96px 0;
+  }
+
+  /* Разрешаем перенос блоков и выравниваем по левому краю контейнера */
+  .container-footer {
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: baseline;
+    justify-content: flex-start;
+    gap: 72px 24px; /* 72px между строками, 24px горизонтально между блоками */
+    max-width: 584px; /* Специальное ограничение ширины по сетке планшета WebStudio */
+    margin: 0 auto;
+  }
+
+  .footer-info {
+    align-items: flex-start; /* Выравнивание текста и лого влево */
+  }
+
+  .footer-desc {
+    text-align: left;
+    max-width: 264px;
+  }
+
+  .footer-socials {
+    align-items: flex-start;
+  }
+
+  .footer-bottom {
+    align-items: flex-start;
+    width: auto;
+  }
+
+  /* Форма на планшете и десктопе выстраивается горизонтально в один ряд */
+  .footer-form {
+    flex-direction: row;
+    gap: 24px; /* Горизонтальный отступ между инпутом и кнопкой */
+  }
+
+  .footer-form-input {
+    width: 264px; /* Фиксированная ширина поля ввода по макету */
+  }
+}
+
+@media screen and (min-width: 1158px) {
+  .footer {
+    padding: 100px 0;
+  }
+
+  /* Отменяем перенос строк — все три блока плавно выстраиваются в одну линию */
+  .container-footer {
+    max-width: 1158px;
+    flex-wrap: nowrap;
+    align-items: baseline;
+    justify-content: space-between; /* Распределяем блоки по краям десктопной сетки */
+    gap: 0;
+    margin: 0 auto;
+    padding-left: 15px;
+    padding-right: 15px;
+  }
+
+  /* Задаем фиксированные внешние отступы между блоками по десктопному стандарту */
+  .footer-info {
+    margin-right: 120px;
+  }
+
+  .footer-socials {
+    margin-right: 80px;
+  }
+
+  .footer-bottom {
+    margin-right: 0;
+  }
 }

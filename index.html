@@ -25,43 +25,51 @@
   <body>
     <!-- Header section -->
     <header class="page-header" id="header">
-      <div class="container">
+      <div class="container header-container">
         <a class="logo" href="./index.html"
           ><span class="accent">Web</span>Studio</a
         >
-        <nav class="main-nav">
-          <ul class="main-nav-list">
-            <li class="main-nav-item">
-              <a class="main-nav-link current" href="#features">Features</a>
-            </li>
-            <li class="main-nav-item">
-              <a class="main-nav-link" href="#team">Team</a>
-            </li>
-            <li class="main-nav-item">
-              <a class="main-nav-link" href="#portfolio">Portfolio</a>
-            </li>
-          </ul>
-        </nav>
+
+        <button
+          class="mobile-menu-open-btn"
+          type="button"
+          aria-label="Open mobile menu button"
+        >
+          <svg class="mobile-menu-open-icon" width="24" height="24">
+            <use href="./images/icons.svg#burger-menu"></use>
+          </svg>
+        </button>
+
+        <div class="header-nav-wrapper">
+      <nav class="main-nav">
+        <ul class="main-nav-list">
+          <li class="main-nav-item">
+            <a class="main-nav-link current" href="#features">Features</a>
+          </li>
+          <li class="main-nav-item">
+            <a class="main-nav-link" href="#team">Team</a>
+          </li>
+          <li class="main-nav-item">
+            <a class="main-nav-link" href="#portfolio">Portfolio</a>
+          </li>
+        </ul>
+      </nav>
         <address class="contacts">
-          <ul class="contacts-list">
-            <li class="contacts-item">
-              <a class="contacts-link" href="mailto:info@devstudio.com"
-                >info@devstudio.com</a
-              >
-            </li>
-            <li class="contacts-item">
-              <a class="contacts-link" href="tel:+110001111111"
-                >+11 (000) 111-11-11</a
-              >
-            </li>
-          </ul>
-        </address>
+        <ul class="contacts-list">
+          <li class="contacts-item">
+            <a class="contacts-link" href="mailto:info@devstudio.com">info@devstudio.com</a>
+          </li>
+          <li class="contacts-item">
+            <a class="contacts-link" href="tel:+110001111111">+11 (000) 111-11-11</a>
+          </li>
+        </ul>
+      </address>
       </div>
     </header>
     <main>
       <!-- Hero -->
       <section class="hero" id="hero">
-        <div class="container">
+        <div class="container hero-container">
           <h1 class="hero-title">Effective Solutions for Your Business</h1>
           <button class="btn btn-filled" type="button">Order Service</button>
         </div>
@@ -131,6 +139,7 @@
               <img
                 class="team-ill"
                 src="./images/team/team-1.png"
+                srcset="./images/team/team-1-d1.jpg, ./images/team/team-1-d2"
                 alt="Mark Guerrero"
                 width="264"
                 height="260"
@@ -195,6 +204,7 @@
               <img
                 class="team-ill"
                 src="./images/team/team-2.png"
+                srcset="./images/team/team-2-d1.jpg, ./images/team/team-2-d2"
                 alt="Tom Ford"
                 width="264"
                 height="260"
@@ -259,6 +269,7 @@
               <img
                 class="team-ill"
                 src="./images/team/team-3.png"
+                srcset="./images/team/team-3-d1.jpg, ./images/team/team-3-d2"
                 alt="Camila Garcia"
                 width="264"
                 height="260"
@@ -323,6 +334,7 @@
               <img
                 class="team-ill"
                 src="./images/team/team-4.png"
+                srcset="./images/team/team-4-d1.jpg, ./images/team/team-4-d2"
                 alt="Daniel Wilson"
                 width="264"
                 height="260"
@@ -396,6 +408,7 @@
                 <img
                   class="portfolio-pic"
                   src="./images/portfolio/media-1.jpg"
+                  srcset="./images/portfolio/media-1-d1.jpg, ./images/portfolio/media-1-d2"
                   alt="Banking App"
                   width="360"
                   height="300"
@@ -417,6 +430,7 @@
                   <img
                     class="portfolio-pic"
                     src="./images/portfolio/media-2.png"
+                    srcset="./images/portfolio/media-2-d1.jpg, ./images/portfolio/media-2-d2"
                     alt="Cashless Payment"
                     width="360"
                     height="300"
@@ -438,6 +452,7 @@
                 <img
                   class="portfolio-pic"
                   src="./images/portfolio/media-3.jpg"
+                  srcset="./images/portfolio/media-3-d1.jpg, ./images/portfolio/media-3-d2"
                   alt="Meditation App"
                   width="360"
                   height="300"
@@ -458,6 +473,7 @@
                 <img
                   class="portfolio-pic"
                   src="./images/portfolio/media-4.jpg"
+                  srcset="./images/portfolio/media-4-d1.jpg, ./images/portfolio/media-4-d2"
                   alt="Taxi Service"
                   width="360"
                   height="300"
@@ -478,6 +494,7 @@
                 <img
                   class="portfolio-pic"
                   src="./images/portfolio/media-5.jpg"
+                  srcset="./images/portfolio/media-5-d1.jpg, ./images/portfolio/media-5-d2"
                   alt="Screen Illustrations"
                   width="360"
                   height="300"
@@ -498,6 +515,7 @@
                 <img
                   class="portfolio-pic"
                   src="./images/portfolio/media-6.jpg"
+                  srcset="./images/portfolio/media-6-d1.jpg, ./images/portfolio/media-6-d2"
                   alt="Online Courses"
                   width="360"
                   height="300"
@@ -679,19 +697,112 @@
                 </svg>
               </span>
 
-              I accept the terms and conditions of the&nbsp;
-              <a
-                class="modal-form-link"
-                href="#"
-                target="_blank"
-                rel="noopener noreferrer"
-                >Privacy Policy</a
-              >
+              <span class="modal-form-policy-text"> 
+                I accept the terms and conditions of the 
+                <a class="modal-form-link" href="#" target="_blank" rel="noopener noreferrer">Privacy Policy</a>
+            </span>
             </label>
           </div>
 
           <button class="btn btn-filled" type="submit">Send</button>
         </form>
+      </div>
+    </div>
+
+    <div class="mobile-menu" id="mobile-menu">
+      <div class="container mobile-container">
+        <button
+          class="mobile-menu-close-btn"
+          type="button"
+          aria-label="Close menu button"
+        >
+          <svg class="mobile-menu-close-icon" width="8" height="8">
+            <use href="./images/icons.svg#close"></use>
+          </svg>
+        </button>
+
+        <nav class="mobile-nav">
+          <ul class="mobile-nav-list">
+            <li class="mobile-nav-item">
+              <a class="mobile-nav-link current" href="">Features</a>
+            </li>
+            <li class="mobile-nav-item">
+              <a class="mobile-nav-link" href="">Team</a>
+            </li>
+            <li class="mobile-nav-item">
+              <a class="mobile-nav-link" href="">Portfolio</a>
+            </li>
+          </ul>
+        </nav>
+
+        <address class="mobile-contacts-social-wrapper">
+          <ul class="mobile-contacts-list">
+            <li class="mobile-contacts-item">
+              <a class="mobile-contacts-link accent" href="tel:+110001111111"
+                >+11 (000) 111-11-11</a
+              >
+            </li>
+            <li class="mobile-contacts-item">
+              <a class="mobile-contacts-link" href="mailto:info@devstudio.com"
+                >info@devstudio.com</a
+              >
+            </li>
+          </ul>
+        </address>
+        <ul class="mobile-social-list">
+          <li class="mobile-social-item">
+            <a
+              class="mobile-social-link"
+              href="https://instagram.com"
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label="Instagram link"
+            >
+              <svg class="mobile-social-icon" width="24" height="24">
+                <use href="./images/icons.svg#instagram"></use>
+              </svg>
+            </a>
+          </li>
+          <li class="mobile-social-item">
+            <a
+              class="mobile-social-link"
+              href="https://twitter.com"
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label="Twitter/X link"
+            >
+              <svg class="mobile-social-icon" width="24" height="24">
+                <use href="./images/icons.svg#twitter"></use>
+              </svg>
+            </a>
+          </li>
+          <li class="mobile-social-item">
+            <a
+              class="mobile-social-link"
+              href="https://facebook.com"
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label="Facebook link"
+            >
+              <svg class="mobile-social-icon" width="24" height="24">
+                <use href="./images/icons.svg#facebook"></use>
+              </svg>
+            </a>
+          </li>
+          <li class="mobile-social-item">
+            <a
+              class="mobile-social-link"
+              href="https://linkedin.com"
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label="LinkedIn link"
+            >
+              <svg class="mobile-social-icon" width="24" height="24">
+                <use href="./images/icons.svg#linkedin"></use>
+              </svg>
+            </a>
+          </li>
+        </ul>
       </div>
     </div>
   </body>

@@ -1,63 +1,78 @@
 .team {
   background-color: #f4f4fd;
-  padding: 120px 0;
+  padding: 96px 0;
 }
+
 .team-title {
+  font-weight: 700;
   font-size: 36px;
   line-height: 1.11;
+  text-align: center;
   letter-spacing: 0.02em;
   text-transform: capitalize;
-  text-align: center;
   color: #2e2f42;
+  margin-top: 0;
   margin-bottom: 72px;
 }
-.team-list {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 24px;
-  justify-content: center;
-}
-.team-item {
-  box-shadow:
-    0 2px 1px 0 rgba(46, 47, 66, 0.08),
-    0 1px 1px 0 rgba(46, 47, 66, 0.16),
-    0 1px 6px 0 rgba(46, 47, 66, 0.08);
-  background: #fff;
-  border-radius: 0 0 4px 4px;
 
-  box-sizing: border-box;
+.team-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 72px;
 }
+
+.team-item {
+  background-color: #ffffff;
+  max-width: 264px;
+  width: 100%;
+  border-radius: 0px 0px 4px 4px;
+  box-shadow:
+    0px 1px 6px rgba(46, 47, 66, 0.08),
+    0px 1px 1px rgba(46, 47, 66, 0.16),
+    0px 2px 1px rgba(46, 47, 66, 0.08);
+}
+
 .team-ill {
   display: block;
+  max-width: 100%;
   height: auto;
 }
+
 .member-content-wrapper {
-  padding: 32px 16px;
+  padding: 32px 0;
   text-align: center;
 }
-.team .team-name {
+
+.team-name {
   font-weight: 500;
   font-size: 20px;
   line-height: 1.2;
   letter-spacing: 0.02em;
-  text-align: center;
+  color: #2e2f42;
+  margin-top: 0;
   margin-bottom: 8px;
 }
+
 .team-type {
-  margin: 0;
-  margin-bottom: 8px;
   font-size: 16px;
-  font-weight: 400;
-  text-align: center;
+  line-height: 1.5;
+  letter-spacing: 0.02em;
   color: #434455;
+  margin-top: 0;
+  margin-bottom: 8px;
 }
+
 .socials {
-  display: flex;
-  justify-content: center;
-  gap: 24px;
   list-style: none;
   padding: 0;
   margin: 0;
+  display: flex;
+  justify-content: center;
+  gap: 24px;
 }
 
 .socials-item {
@@ -83,7 +98,30 @@
 }
 
 .socials-icon {
-  width: 16px;
-  height: 16px;
-  fill: currentColor;
+  fill: #f4f4fd;
+}
+
+@media screen and (min-width: 768px) {
+  .team-list {
+    flex-direction: row; /* Дозволяємо елементам ставати поруч */
+    flex-wrap: wrap; /* Вмикаємо перенос для формування сітки */
+    justify-content: center;
+    gap: 64px 24px; /* 64px між рядками та 24px горизонтально між колонками */
+  }
+
+  /* На планшеті контейнер автоматично розставить фіксовані картки по дві в ряд */
+  .team-item {
+    margin: 0;
+  }
+}
+
+@media screen and (min-width: 1158px) {
+  .team {
+    padding: 120px 0; /* Збільшуємо падінги секції за десктопним макетом */
+  }
+
+  .team-list {
+    flex-wrap: nowrap; /* Забороняємо перенос — усі 4 картки стають в один ряд */
+    gap: 24px; /* Тільки горизонтальний простір 24px між 4 колонками */
+  }
 }
