@@ -39,8 +39,8 @@
   line-height: 1.5;
   letter-spacing: 0.02em;
   color: #f4f4fd;
-  max-width: 268px;
-  text-align: center;
+  max-width: 264px;
+  text-align: left;
   margin: 0;
 }
 
@@ -169,24 +169,18 @@
     padding: 96px 0;
   }
 
-  /* Разрешаем перенос блоков и выравниваем по левому краю контейнера */
   .container-footer {
     flex-direction: row;
     flex-wrap: wrap;
     align-items: baseline;
     justify-content: flex-start;
-    gap: 72px 24px; /* 72px между строками, 24px горизонтально между блоками */
-    max-width: 584px; /* Специальное ограничение ширины по сетке планшета WebStudio */
+    gap: 72px 24px;
+    max-width: 584px;
     margin: 0 auto;
   }
 
   .footer-info {
     align-items: flex-start; /* Выравнивание текста и лого влево */
-  }
-
-  .footer-desc {
-    text-align: left;
-    max-width: 264px;
   }
 
   .footer-socials {
@@ -198,14 +192,13 @@
     width: auto;
   }
 
-  /* Форма на планшете и десктопе выстраивается горизонтально в один ряд */
   .footer-form {
     flex-direction: row;
-    gap: 24px; /* Горизонтальный отступ между инпутом и кнопкой */
+    gap: 24px;
   }
 
   .footer-form-input {
-    width: 264px; /* Фиксированная ширина поля ввода по макету */
+    width: 264px;
   }
 }
 
@@ -214,16 +207,14 @@
     padding: 100px 0;
   }
 
-  /* Отменяем перенос строк — все три блока плавно выстраиваются в одну линию */
   .container-footer {
     max-width: 1158px;
     flex-wrap: nowrap;
     align-items: baseline;
-    justify-content: space-between; /* Распределяем блоки по краям десктопной сетки */
+
+    justify-content: flex-start;
     gap: 0;
     margin: 0 auto;
-    padding-left: 15px;
-    padding-right: 15px;
   }
 
   /* Задаем фиксированные внешние отступы между блоками по десктопному стандарту */
@@ -236,6 +227,7 @@
   }
 
   .footer-bottom {
+    margin-left: auto;
     margin-right: 0;
   }
 }
